@@ -26,7 +26,7 @@ const QuestionPage: NextPage = () => {
 
   useEffect(() => {
     setProgressRate(calcProgressRate(questions));
-  }, [questions]);
+  }, [questions, setProgressRate]);
 
   useEffect(() => {
     if (progressRate === 1) {
@@ -44,7 +44,7 @@ const QuestionPage: NextPage = () => {
       history.replace(`/loading?sports=${sports}`);
       return;
     }
-  }, [progressRate]);
+  }, [history, progressRate, questions]);
 
   const calcProgressRate = (questions: Question[]): number => {
     const d = questions.length;

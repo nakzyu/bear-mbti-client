@@ -17,7 +17,7 @@ const Loading: NextPage = () => {
     return () => {
       clearTimeout(go);
     };
-  }, [sports]);
+  }, [history, sports]);
 
   return (
     <SinglePageContent>

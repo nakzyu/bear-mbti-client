@@ -58,7 +58,6 @@ const Result: NextPage<Props, JSX.Element> = ({
         <Block flex={0.5} />
         <Title>{title}하는 곰돌이</Title>
         <ImgContaier>
-          {" "}
           <ImgCard src={`/images/${type}.png`} alt={`${type}-image`} />
         </ImgContaier>
       </ScrollableContent>

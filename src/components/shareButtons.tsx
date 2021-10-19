@@ -7,20 +7,24 @@ type Props = {
   typeImgSrc: string;
   hostUrl: string;
   resultUrl: string;
+  title: string;
+  subtitle: string;
 };
 
 export default function ShareButtons({
   hostUrl,
   resultUrl,
   typeImgSrc,
+  title,
+  subtitle,
 }: Props) {
   const send = () => {
     if (typeof window !== "undefined") {
       window.Kakao.Link.sendDefault({
         objectType: "feed", // 메시지 형식 : 피드 타입
         content: {
-          title: "운동하는 곰돌이 테스트",
-          description: "나의 곰돌이 찾기",
+          title,
+          description: subtitle,
           imageUrl: typeImgSrc, // 메인으로 보여질 이미지 주소
           link: {
             webUrl: resultUrl,

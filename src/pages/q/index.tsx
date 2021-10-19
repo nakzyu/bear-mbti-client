@@ -32,15 +32,10 @@ const QuestionPage: NextPage = () => {
     if (progressRate === 1) {
       const mbtiType = calcMBTI(questions);
 
-      try {
-        postResult({
-          type: mbtiType,
-        });
-      } catch (e) {
-        console.log(e);
-      }
-
       const sports = (mapMbtiToSports as Record<string, string>)[mbtiType];
+      postResult({
+        type: sports,
+      });
       history.replace(`/loading?sports=${sports}`);
       return;
     }

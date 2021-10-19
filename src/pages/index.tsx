@@ -15,7 +15,7 @@ const Landing: NextPage = () => {
     <SinglePageContent>
       <Block flex={0.5} />
       <Title>운동하는 곰돌이 테스트</Title>
-      <Subtitle>나의 곰돌이 찾기</Subtitle>
+      <Subtitle>내 성향에 어울리는 운동은 무엇일까?</Subtitle>
       <ImgContaier>
         <ImgCard src="images/title.png" alt="title-image" />
       </ImgContaier>

@@ -39,6 +39,7 @@ class MyDocument extends Document {
         <Head>
           <meta property="og:type" content="website" />
           <meta property="og:site_name" content="운동하는 곰돌이 테스트" />
+          <link rel="preload" href="/images/loading.png" as="image" />
           <script
             defer
             src="https://developers.kakao.com/sdk/js/kakao.js"

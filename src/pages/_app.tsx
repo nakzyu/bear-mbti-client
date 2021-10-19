@@ -6,8 +6,6 @@ import { Container } from "../styles/components";
 import theme from "../styles/theme";
 import genHead from "../utils/customHead";
 import { HeadTag } from "../types/headTag";
-import { preload } from "../utils/preload";
-preload("/images/loading.png");
 
 declare global {
   interface Window {

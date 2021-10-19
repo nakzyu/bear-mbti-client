@@ -7,6 +7,7 @@ import {
   ImgCard,
   Subtitle,
   Title,
+  ImgContaier,
 } from "../styles/components/";
 
 const Landing: NextPage = () => {
@@ -15,7 +16,9 @@ const Landing: NextPage = () => {
       <Block flex={0.5} />
       <Title>운동하는 곰돌이 테스트</Title>
       <Subtitle>나의 곰돌이 찾기</Subtitle>
-      <ImgCard src="images/title.png" alt="title-image" />
+      <ImgContaier>
+        <ImgCard src="images/title.png" alt="title-image" />
+      </ImgContaier>
       <Block flex={0.5}>
         <Link href="/q" passHref>
           <Button>시작</Button>

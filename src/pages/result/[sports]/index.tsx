@@ -7,6 +7,7 @@ import {
   Button,
   Content,
   ImgCard,
+  ImgContaier,
   ScrollableContent,
   Subtitle,
   Title,
@@ -56,7 +57,10 @@ const Result: NextPage<Props, JSX.Element> = ({
       <ScrollableContent>
         <Block flex={0.5} />
         <Title>{title}하는 곰돌이</Title>
-        <ImgCard src={`/images/${type}.png`} alt={`${type}-image`} />
+        <ImgContaier>
+          {" "}
+          <ImgCard src={`/images/${type}.png`} alt={`${type}-image`} />
+        </ImgContaier>
       </ScrollableContent>
       <Subtitle>{subtitle}</Subtitle>
       <Content>{content}</Content>
@@ -65,6 +69,7 @@ const Result: NextPage<Props, JSX.Element> = ({
         resultUrl={resultUrl}
         typeImgSrc={imgSrcUrlForShare}
       />
+
       <Link href="/" passHref>
         <Button>나의 곰돌이 찾기</Button>
       </Link>

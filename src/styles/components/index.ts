@@ -49,7 +49,6 @@ export const ScrollableContent = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 40vh;
   margin: auto;
 `;
 
@@ -72,11 +71,16 @@ export const Content = styled.p`
   color: rgba(0, 0, 0, 0.6);
 `;
 
+export const ImgContaier = styled.div``;
+
 export const ImgCard = styled.img`
-  flex: 4;
-  height: 1vh;
-  max-width: 500px;
-  max-height: 500px;
+  width: 300px;
+  height: 300px;
+
+  @media screen and (min-width: 500px) {
+    width: 400px;
+    height: 400px;
+  }
 `;
 
 export const Subtitle = styled.h2`

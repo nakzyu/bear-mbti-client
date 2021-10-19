@@ -11,7 +11,7 @@ export const Block = styled.div`
 export const Button = styled.button`
   display: inline-block;
   vertical-align: top;
-  border: 4px solid ${(props) => props.color};
+  border: 4px solid ${(props) => props.theme.MAIN_COLOR};
   border-radius: 4px;
   height: inherit;
   font-size: 18px;
@@ -22,11 +22,12 @@ export const Button = styled.button`
   width: 80vw;
   max-width: 316px;
   background: white;
+  height: 55px;
 
   :active {
     cursor: pointer;
     transition: 0.15s ease-in-out;
-    background: ${(props) => props.color};
+    background: ${(props) => props.theme.MAIN_COLOR};
     color: white;
   }
 `;

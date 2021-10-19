@@ -56,6 +56,6 @@ const SVG = styled.svg`
 
   :active {
     transition: 0.15s ease-in-out;
-    fill: #0433ff;
+    fill: ${(props) => props.theme.MAIN_COLOR};
   }
 `;

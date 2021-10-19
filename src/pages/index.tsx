@@ -18,7 +18,7 @@ const Landing: NextPage = () => {
       <ImgCard src="images/title.png" alt="title-image" />
       <Block flex={0.5}>
         <Link href="/q" passHref>
-          <Button color="#0433ff">시작</Button>
+          <Button>시작</Button>
         </Link>
       </Block>
       <Block flex={1} />

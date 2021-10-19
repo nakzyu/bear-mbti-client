@@ -13,30 +13,30 @@ export default function ShareButtons({
   hostUrl,
   resultUrl,
   typeImgSrc,
-}: Props): JSX.Element {
+}: Props) {
   const send = () => {
     if (typeof window !== "undefined") {
-      // window.Kakao.Link.sendDefault({
-      //   objectType: "feed", // 메시지 형식 : 피드 타입
-      //   content: {
-      //     title: "개성 넘치고 귀여운 인싸 친구, 아이비",
-      //     description: "나와 잘 맞는 식물 친구는?",
-      //     imageUrl: typeImgSrc, // 메인으로 보여질 이미지 주소
-      //     link: {
-      //       webUrl: resultUrl,
-      //       mobileWebUrl: resultUrl,
-      //     },
-      //   },
-      //   buttons: [
-      //     {
-      //       title: "결과보기",
-      //       link: {
-      //         webUrl: resultUrl,
-      //         mobileWebUrl: resultUrl,
-      //       },
-      //     },
-      //   ],
-      // });
+      window.Kakao.Link.sendDefault({
+        objectType: "feed", // 메시지 형식 : 피드 타입
+        content: {
+          title: "개성 넘치고 귀여운 인싸 친구, 아이비",
+          description: "나와 잘 맞는 식물 친구는?",
+          imageUrl: typeImgSrc, // 메인으로 보여질 이미지 주소
+          link: {
+            webUrl: resultUrl,
+            mobileWebUrl: resultUrl,
+          },
+        },
+        buttons: [
+          {
+            title: "결과보기",
+            link: {
+              webUrl: resultUrl,
+              mobileWebUrl: resultUrl,
+            },
+          },
+        ],
+      });
     }
   };
 

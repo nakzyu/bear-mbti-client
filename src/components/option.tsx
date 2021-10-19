@@ -16,7 +16,7 @@ export default function Option({
   optionIndex,
   onOptionSelected,
   selected,
-}: OptionType & Props): JSX.Element {
+}: OptionType & Props) {
   const [selectedColor] = useState(selected);
   useEffect(() => {
     return;
@@ -34,6 +34,7 @@ export default function Option({
 
 type CardProps = {
   selected: boolean;
+  theme: Record<string, string>;
 };
 
 const Card = styled.li`
@@ -45,15 +46,14 @@ const Card = styled.li`
   padding: 20px;
 
   background-color: ${(props: CardProps) =>
-    props.selected ? "#0433ff" : "#f7f7f7"};
+    props.selected ? props.theme.MAIN_COLOR : "#f7f7f7"};
   color: ${(props: CardProps) => (props.selected ? "#f7f7f7" : "")};
 
   border-radius: 4px;
 
   :active {
     transition: 0.15s ease-in-out;
-    background: #0433ff;
-
+    background: ${(props: CardProps) => props.theme.MAIN_COLOR};
     p {
       color: #f7f7f7;
     }

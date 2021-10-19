@@ -1,7 +1,9 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { ThemeProvider } from "styled-components";
-import { GlobalStyles } from "../styles/global/globalStyles";
+import styled, { ThemeProvider } from "styled-components";
+import GlobalStyles from "../styles/global";
+import { Container } from "../styles/components";
+import theme from "../styles/theme";
 
 declare global {
   interface Window {
@@ -21,27 +23,22 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>boilerplate</title>
       </Head>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <Container>
+          <Space />
+          <Component {...pageProps} />
+        </Container>
+      </ThemeProvider>
     </>
   );
 }
 
 export default MyApp;
 
-// import type { AppProps } from "next/app";
-// import styled from "styled-components";
-// import { GlobalStyles } from "../styles/globalStyles";
-// import { Container } from "../styles/container";
-
-// function MyApp({ Component, pageProps }: AppProps) {
-//   return <Component {...pageProps} />;
-// }
-// export default MyApp;
-
-// const Space = styled.div`
-//   width: 80vw;
-//   @media screen and (min-height: 900px) {
-//     height: 5vh;
-//     max-height: 400px;
-//   }
-// `;
+const Space = styled.div`
+  width: 80vw;
+  @media screen and (min-height: 900px) {
+    height: 5vh;
+    max-height: 400px;
+  }
+`;

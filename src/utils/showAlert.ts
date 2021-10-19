@@ -1,5 +1,7 @@
 // "클립보드에 복사 되었습니다."
 
+import theme from "../styles/theme";
+
 export default function showAlert(text: string): void {
   const textContainer = document.createElement("div");
   textContainer.translate = true;
@@ -21,7 +23,7 @@ export default function showAlert(text: string): void {
   p.style.left = "50%";
   p.style.fontSize = "20px";
   p.style.transform = "translate(-50%,-50%)";
-  p.style.background = "#0433ff";
+  p.style.background = theme.MAIN_COLOR;
   p.style.color = "white";
   p.style.padding = "5px";
 

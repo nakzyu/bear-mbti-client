@@ -5,17 +5,17 @@ type Props = {
   rate: number;
 };
 
-export default function ProgressBar({ rate }: Props): JSX.Element {
+export default function ProgressBar({ rate }: Props) {
   return (
     <BarWrapper>
-      <BarContent progressRate={rate * 100} color="#0433ff" />
+      <BarContent progressRate={rate * 100} />
     </BarWrapper>
   );
 }
 
 type BarContentProps = {
-  color: string;
   progressRate: number;
+  theme: Record<string, string>;
 };
 
 export const BarWrapper = styled.div`
@@ -35,6 +35,6 @@ export const BarContent = styled.div`
   width: ${(props: BarContentProps) => props.progressRate}%;
   height: inherit;
   border-radius: 5px;
-  background-color: ${(props: BarContentProps) => props.color};
+  background-color: ${(props: BarContentProps) => props.theme.MAIN_COLOR};
   transition: width 0.2s ease-out 0s;
 `;

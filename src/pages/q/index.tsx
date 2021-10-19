@@ -31,9 +31,15 @@ const QuestionPage: NextPage = () => {
   useEffect(() => {
     if (progressRate === 1) {
       const mbtiType = calcMBTI(questions);
-      // postResult({
-      //   type: mbtiType,
-      // });
+
+      try {
+        postResult({
+          type: mbtiType,
+        });
+      } catch (e) {
+        console.log(e);
+      }
+
       const sports = (mapMbtiToSports as Record<string, string>)[mbtiType];
       history.replace(`/loading?sports=${sports}`);
       return;
@@ -41,7 +47,7 @@ const QuestionPage: NextPage = () => {
   }, [progressRate]);
 
   const calcProgressRate = (questions: Question[]): number => {
-    const d = questions.length - 1;
+    const d = questions.length;
     const n = questions
       .map((q) => !!q.options.find((o) => o.selected === true))
       .filter((boolean) => boolean).length;

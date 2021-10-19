@@ -5,7 +5,7 @@ type Props = {
   text: string;
 };
 
-export default function Direction({ text }: Props): JSX.Element {
+export default function Direction({ text }: Props) {
   return (
     <DirectionCard>
       <DirectionText>{text}</DirectionText>

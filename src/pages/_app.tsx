@@ -4,6 +4,10 @@ import styled, { ThemeProvider } from "styled-components";
 import GlobalStyles from "../styles/global";
 import { Container } from "../styles/components";
 import theme from "../styles/theme";
+import genHead from "../utils/customHead";
+import { HeadTag } from "../types/headTag";
+import { preload } from "../utils/preload";
+preload("/images/loading.png");
 
 declare global {
   interface Window {
@@ -15,13 +19,29 @@ if (typeof window !== "undefined") {
   window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_APP_KEY);
 }
 
+const headTags: HeadTag[] = [
+  {
+    property: "og:title",
+    content: "운동하는 곰돌이 테스트",
+  },
+  {
+    property: "og:image",
+    content: "/images/title.png",
+  },
+  {
+    property: "og:url",
+    content: process.env.NEXT_PUBLIC_CLIENT_URL as string,
+  },
+  {
+    property: "og:description",
+    content: "나의 곰돌이 찾기",
+  },
+];
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>boilerplate</title>
-      </Head>
+      {genHead(headTags)}
       <GlobalStyles />
       <ThemeProvider theme={theme}>
         <Container>

@@ -1,9 +1,9 @@
 import Document, {
   Html,
-  Head,
   Main,
   NextScript,
   DocumentContext,
+  Head,
 } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
@@ -37,6 +37,8 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="운동하는 곰돌이 테스트" />
           <script
             defer
             src="https://developers.kakao.com/sdk/js/kakao.js"

@@ -1,5 +1,5 @@
 import { NextRouter } from "next/router";
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "../hooks/useForm";
 import { Indicators } from "../types/indicators";
 import { Question } from "../types/question";
@@ -10,7 +10,9 @@ import Back from "../components/back";
 import ProgressBar from "../components/progressBar";
 import Direction from "../components/direction";
 import Option from "../components/option";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { showUp } from "../styles/keyframes";
+import { useAni } from "../hooks/useAni";
 
 type TestProps = {
   router: NextRouter;
@@ -25,6 +27,8 @@ export default function Test({ router }: TestProps): JSX.Element {
     questions,
     onOptionSelected,
   } = useForm();
+
+  const { active, start, duration } = useAni(1000);
 
   useEffect(() => {
     setProgressRate(calcProgressRate(questions));
@@ -88,7 +92,13 @@ export default function Test({ router }: TestProps): JSX.Element {
         <p>Q.{i + 1}</p>
       </Title>
       <Direction text={questions[+i].direction} />
-      <Ul>
+      <Ul
+        active={active}
+        duration={duration}
+        onClick={() => {
+          start();
+        }}
+      >
         {questions[+i].options.map((option, optionIndex) => (
           <Option
             key={option.type}
@@ -105,9 +115,21 @@ export default function Test({ router }: TestProps): JSX.Element {
   );
 }
 
+type UlProps = {
+  active: boolean;
+  duration: number;
+};
+
 const Ul = styled.ul`
   width: inherit;
   max-height: 200px;
   max-width: 500px;
   flex: 1.5;
+  ${(props: UlProps) =>
+    props.active
+      ? css`
+          animation: ${showUp} ease-out ${props.duration / 1000}s;
+        `
+      : ""}
+  pointer-events: ${(props) => (props.active ? "none" : "all")};
 `;

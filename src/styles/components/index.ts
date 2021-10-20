@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 type BlockProps = {
@@ -92,6 +93,7 @@ export const Subtitle = styled.h2`
 
 export const Title = styled.h1`
   font-size: 36px;
+  max-width: 500px;
   font-weight: 700;
   flex: 0.6;
   margin: auto;

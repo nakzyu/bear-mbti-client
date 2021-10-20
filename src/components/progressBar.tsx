@@ -36,5 +36,5 @@ export const BarContent = styled.div`
   height: inherit;
   border-radius: 5px;
   background-color: ${(props: BarContentProps) => props.theme.MAIN_COLOR};
-  transition: width 0.2s ease-out 0s;
+  transition: width 1s ease-out 0s;
 `;

@@ -25,7 +25,9 @@ export default function Option({
   return (
     <Card
       selected={selected}
-      onClick={() => onOptionSelected(questionIndex, optionIndex)}
+      onClick={() => {
+        onOptionSelected(questionIndex, optionIndex);
+      }}
     >
       <OptionText selected={selected}>{text}</OptionText>
     </Card>
@@ -35,6 +37,10 @@ export default function Option({
 type CardProps = {
   selected: boolean;
   theme: Record<string, string>;
+};
+
+type OptionTextProps = {
+  selected: boolean;
 };
 
 const Card = styled.li`
@@ -63,7 +69,6 @@ const Card = styled.li`
 const OptionText = styled.p`
   font-size: 16px;
   width: inherit;
-  min-heigth:100px
-  color: ${(props: CardProps) =>
+  color: ${(props: OptionTextProps) =>
     props.selected ? "#f7f7f7" : "rgba(0, 0, 0, 0.8)"};
 `;

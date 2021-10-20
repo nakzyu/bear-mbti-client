@@ -6,7 +6,6 @@ ${reset};
 body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     white-space: pre-wrap;
-}
-`;
+}`;
 
 export default GlobalStyles;

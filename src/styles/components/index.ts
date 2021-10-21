@@ -9,27 +9,6 @@ export const Block = styled.div`
 `;
 
 export const Button = styled.button`
-  /* display: inline-block;
-  vertical-align: top;
-  border: 4px solid ${(props) => props.theme.MAIN_COLOR};
-  border-radius: 4px;
-  height: inherit;
-  font-size: 18px;
-  line-height: 1;
-  font-weight: 600;
-  color: #000;
-  cursor: pointer;
-  width: 80vw;
-  max-width: 316px;
-  background: white;
-  height: 55px;
-
-  :active {
-    cursor: pointer;
-    transition: 0.15s ease-in-out;
-    background: ${(props) => props.theme.MAIN_COLOR};
-    color: white;
-  } */
   display: inline-block;
   vertical-align: top;
   border: 4px solid ${(props) => props.theme.MAIN_COLOR};

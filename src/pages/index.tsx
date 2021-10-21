@@ -21,7 +21,7 @@ const Landing: NextPage = () => {
       </ImgContaier>
       <Block flex={0.5}>
         <Link href="/q" passHref>
-          <Button>시작</Button>
+          <Button>시작하기</Button>
         </Link>
       </Block>
       <Block flex={1} />

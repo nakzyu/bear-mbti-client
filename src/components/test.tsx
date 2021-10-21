@@ -93,11 +93,11 @@ export default function Test({ router }: TestProps): JSX.Element {
       </Title>
       <Direction text={questions[+i].direction} />
       <Ul
-        active={active}
-        duration={duration}
         onClick={() => {
           start();
         }}
+        active={active}
+        duration={duration}
       >
         {questions[+i].options.map((option, optionIndex) => (
           <Option

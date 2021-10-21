@@ -10,7 +10,7 @@ export const Block = styled.div`
 `;
 
 export const Button = styled.button`
-  display: inline-block;
+  /* display: inline-block;
   vertical-align: top;
   border: 4px solid ${(props) => props.theme.MAIN_COLOR};
   border-radius: 4px;
@@ -30,7 +30,21 @@ export const Button = styled.button`
     transition: 0.15s ease-in-out;
     background: ${(props) => props.theme.MAIN_COLOR};
     color: white;
-  }
+  } */
+  display: inline-block;
+  vertical-align: top;
+  border: 4px solid ${(props) => props.theme.MAIN_COLOR};
+  border-radius: 4px;
+  height: inherit;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  width: 80vw;
+  max-width: 316px;
+  background: ${(props) => props.theme.MAIN_COLOR};
+  height: 55px;
 `;
 
 export const SinglePageContent = styled.div`

@@ -32,7 +32,7 @@ const headTags: HeadTag[] = [
   },
   {
     property: "og:description",
-    content: "나의 곰돌이 찾기",
+    content: "내 성향에 어울리는 운동은 무엇일까?",
   },
 ];
 

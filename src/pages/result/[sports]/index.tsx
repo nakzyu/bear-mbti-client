@@ -98,7 +98,7 @@ const Result: NextPage<Props, JSX.Element> = ({
       />
 
       <Link href="/" passHref>
-        <Button>나의 곰돌이 찾기</Button>
+        <Button>테스트 다시하기</Button>
       </Link>
       <Block flex={1.5} />
     </>

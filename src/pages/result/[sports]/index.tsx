@@ -1,6 +1,7 @@
 import { GetStaticPropsContext, NextPage } from "next";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import AutoTicker from "../../../components/autoTicker";
 import ShareButtons from "../../../components/shareButtons";
 import { sportsResults } from "../../../data/sportsResults";
 import {
@@ -96,10 +97,11 @@ const Result: NextPage<Props, JSX.Element> = ({
         title={title + "하는 곰돌이"}
         subtitle={subtitle}
       />
-
       <Link href="/" passHref>
         <Button>테스트 다시하기</Button>
       </Link>
+
+      <Content>team.oeeeng@gmail.com</Content>
       <Block flex={1.5} />
     </>
   );

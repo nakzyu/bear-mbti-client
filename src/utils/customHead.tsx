@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { HeadTag } from "../types/headTag";
+import { HeadTag } from "../types";
 
 const genHead = (tags: HeadTag[]): JSX.Element => {
   return (

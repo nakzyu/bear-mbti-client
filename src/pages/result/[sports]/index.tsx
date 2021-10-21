@@ -6,11 +6,11 @@ import { sportsResults } from "../../../data/sportsResults";
 import {
   Block,
   Button,
+  ColoredTitle,
   Content,
   ImgCard,
   ImgContaier,
   ScrollableContent,
-  Subtitle,
   Title,
 } from "../../../styles/components";
 import { HeadTag } from "../../../types/headTag";
@@ -81,7 +81,7 @@ const Result: NextPage<Props, JSX.Element> = ({
           <ImgCard src={`/images/${type}.png`} alt={`${type}-image`} />
         </ImgContaier>
       </ScrollableContent>
-      <Subtitle>{subtitle}</Subtitle>
+      <ColoredTitle>{subtitle}</ColoredTitle>
       <Content>{content}</Content>
       {rank && (
         <Content>

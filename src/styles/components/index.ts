@@ -86,7 +86,14 @@ export const ImgCard = styled.img`
 
 export const Subtitle = styled.h2`
   font-size: 18px;
-  color: rgba(0, 0, 0, 0.5);
+  color: ${(props) => props.theme.GRAY_COLOR};
+  margin: auto;
+  text-align: center;
+`;
+
+export const ColoredTitle = styled.h2`
+  font-size: 20px;
+  color: ${(props) => props.theme.MAIN_COLOR};
   margin: auto;
   text-align: center;
 `;

@@ -45,7 +45,7 @@ export default function Test({ router }: TestProps): JSX.Element {
       router.replace(`/loading?sports=${sports}`);
       return;
     }
-  }, [router, progressRate, questions]);
+  }, [progressRate]);
 
   const calcProgressRate = (questions: Question[]): number => {
     const d = questions.length;

@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import styled from "styled-components";
-import { SinglePageContent } from "../../styles/components";
+import { SinglePageContent, Title } from "../../styles/components";
 
 const Loading: NextPage = () => {
   const history = useRouter();
@@ -22,7 +22,7 @@ const Loading: NextPage = () => {
   return (
     <SinglePageContent>
       <PositioningDiv>
-        <p>Loading...</p>
+        <Title>Loading...</Title>
         <LoadingImg src="images/loading.png" />
       </PositioningDiv>
     </SinglePageContent>

@@ -41,7 +41,10 @@ class MyDocument extends Document {
           <meta property="og:type" content="website" />
           <meta property="og:site_name" content="운동하는 곰돌이 테스트" />
           <link rel="preload" href="/images/loading.png" as="image" />
-
+          <meta
+            name="keywords"
+            content="운동 테스트, 운동 mbti 테스트, 운동 mbti, mbti테스트, 성격검사, 성격테스트, mbti, 곰돌이 테스트, 운동하는 곰돌이 테스트"
+          />
           <script
             defer
             src="https://developers.kakao.com/sdk/js/kakao.js"

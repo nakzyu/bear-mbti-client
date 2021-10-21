@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import styled from "styled-components";
 import { SinglePageContent, Title } from "../../styles/components";
+import AutoTicker from "../../components/autoTicker";
 
 const Loading: NextPage = () => {
   const history = useRouter();
@@ -22,7 +23,9 @@ const Loading: NextPage = () => {
   return (
     <SinglePageContent>
       <PositioningDiv>
-        <Title>Loading...</Title>
+        <Title>
+          결과 분석 중<AutoTicker text={"..."} duration={500} />
+        </Title>
         <LoadingImg src="images/loading.png" />
       </PositioningDiv>
     </SinglePageContent>

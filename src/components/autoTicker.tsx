@@ -5,8 +5,8 @@ type AutoTickerProps = {
   duration: number;
 };
 
-// 텍스트 1234가 들어오면
-// 1 => 12 => 123 => 1234 => 1 ... 을 순환하여 표시해줌
+// when text 1234 comes
+// return 1 => 12 => 123 => 1234 => 1 ... recursively
 
 export default function AutoTicker({
   text,

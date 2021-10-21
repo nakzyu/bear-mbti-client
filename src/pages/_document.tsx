@@ -5,6 +5,8 @@ import Document, {
   DocumentContext,
   Head,
 } from "next/document";
+// eslint-disable-next-line @next/next/no-script-in-document
+import Script from "next/script";
 
 import { ServerStyleSheet } from "styled-components";
 
@@ -49,10 +51,10 @@ class MyDocument extends Document {
             defer
             src="https://developers.kakao.com/sdk/js/kakao.js"
           ></script>
-          <script
-            async
+          <Script
+            strategy="afterInteractive"
             src="https://www.googletagmanager.com/gtag/js?id=G-MV95RT581Q"
-          ></script>
+          />
           <script
             dangerouslySetInnerHTML={{
               __html: `

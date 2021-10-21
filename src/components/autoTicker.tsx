@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type Props = {
   text: string;
@@ -9,7 +9,10 @@ type Props = {
 // 1 => 12 => 123 => 1234 => 1 ... 을 순환하여 표시해줌
 
 export default function AutoTicker({ text, duration }: Props): JSX.Element {
-  const strings = text && text.length ? text.split("") : [];
+  const strings = useMemo(
+    () => (text && text.length ? text.split("") : []),
+    [text]
+  );
 
   const [count, setCount] = useState<number>(1);
   const [visibleString, setVisibleString] = useState<string>(strings.join(""));
@@ -25,11 +28,11 @@ export default function AutoTicker({ text, duration }: Props): JSX.Element {
     }, duration);
 
     return () => clearInterval(intv);
-  }, []);
+  }, [duration, strings.length]);
 
   useEffect(() => {
     setVisibleString(strings.slice(0, count).join(""));
-  }, [count]);
+  }, [count, strings]);
 
   return <p>{visibleString}</p>;
 }

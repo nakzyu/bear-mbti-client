@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-type Props = {
+type ProgressBarProps = {
   rate: number;
 };
 
-export default function ProgressBar({ rate }: Props) {
+export default function ProgressBar({ rate }: ProgressBarProps) {
   return (
     <BarWrapper>
       <BarContent progressRate={rate * 100} />

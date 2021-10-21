@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-type Props = {
+type BackProps = {
   setIndex: (i: number) => void;
   i: number;
 };
-export default function Back({ setIndex, i }: Props): JSX.Element {
+export default function Back({ setIndex, i }: BackProps): JSX.Element {
   return (
     <Area>
       {i !== 0 && (

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { copyLinkToClipBoard } from "../utils/export";
 import showAlert from "../utils/showAlert";
 
-type Props = {
+type ShareButtonsProps = {
   typeImgSrc: string;
   hostUrl: string;
   resultUrl: string;
@@ -17,7 +17,7 @@ export default function ShareButtons({
   typeImgSrc,
   title,
   subtitle,
-}: Props) {
+}: ShareButtonsProps) {
   const send = () => {
     if (typeof window !== "undefined") {
       window.Kakao.Link.sendDefault({

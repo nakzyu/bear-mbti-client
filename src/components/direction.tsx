@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-type Props = {
+type DirectionProps = {
   text: string;
 };
 
-export default function Direction({ text }: Props) {
+export default function Direction({ text }: DirectionProps) {
   return (
     <DirectionCard>
       <DirectionText>{text}</DirectionText>

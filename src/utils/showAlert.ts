@@ -1,5 +1,3 @@
-// "클립보드에 복사 되었습니다."
-
 import theme from "../styles/theme";
 
 export default function showAlert(text: string): void {

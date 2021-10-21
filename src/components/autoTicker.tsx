@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
-type Props = {
+type AutoTickerProps = {
   text: string;
   duration: number;
 };
@@ -8,7 +8,10 @@ type Props = {
 // 텍스트 1234가 들어오면
 // 1 => 12 => 123 => 1234 => 1 ... 을 순환하여 표시해줌
 
-export default function AutoTicker({ text, duration }: Props): JSX.Element {
+export default function AutoTicker({
+  text,
+  duration,
+}: AutoTickerProps): JSX.Element {
   const strings = useMemo(
     () => (text && text.length ? text.split("") : []),
     [text]

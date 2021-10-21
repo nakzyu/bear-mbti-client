@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-import { Option as OptionType } from "../types/option";
+import { Option as OptionType } from "../types";
 
 type Props = {
   onOptionSelected: (questionIndex: number, optionIndex: number) => void;

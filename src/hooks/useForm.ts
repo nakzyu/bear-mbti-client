@@ -1,6 +1,7 @@
 import { useState } from "react";
+
 import { Questions } from "../data/questions";
-import { Question } from "../types/question";
+import { Question } from "../types";
 
 export const useForm = (): {
   i: number;

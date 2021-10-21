@@ -1,7 +1,5 @@
 import axios from "axios";
-import { Freqs } from "../types/freqs";
-import { Result } from "../types/result";
-
+import { Freqs, Result } from "../types";
 const resultRoute = "/result";
 
 const getUrl = () => process.env.NEXT_PUBLIC_SERVER_URL;

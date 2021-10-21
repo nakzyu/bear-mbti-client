@@ -1,9 +1,10 @@
-import type { NextPage } from "next";
 import { useEffect, useState } from "react";
+import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import styled from "styled-components";
-import { SinglePageContent, Title } from "../../styles/components";
+
 import AutoTicker from "../../components/autoTicker";
+import { SinglePageContent, Title } from "../../styles/components";
 
 const Loading: NextPage = () => {
   const history = useRouter();

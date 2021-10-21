@@ -1,5 +1,5 @@
-import React from "react";
 import styled from "styled-components";
+
 import { copyLinkToClipBoard } from "../utils/export";
 import showAlert from "../utils/showAlert";
 

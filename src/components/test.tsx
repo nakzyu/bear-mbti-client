@@ -1,18 +1,20 @@
 import { NextRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { useForm } from "../hooks/useForm";
-import { Indicators } from "../types/indicators";
-import { Question } from "../types/question";
-import { postResult } from "../utils/api";
-import mapMbtiToSports from "../data/mapMbtiToSports";
-import { Block, Title } from "../styles/components";
-import Back from "../components/back";
+import styled, { css } from "styled-components";
+
 import ProgressBar from "../components/progressBar";
 import Direction from "../components/direction";
 import Option from "../components/option";
-import styled, { css } from "styled-components";
-import { showUp } from "../styles/keyframes";
+import Back from "../components/back";
+import { useForm } from "../hooks/useForm";
 import { useAni } from "../hooks/useAni";
+
+import { Indicators, Question } from "../types";
+import { postResult } from "../utils/api";
+import { mapMbtiToSports } from "../data/mapMbtiToSports";
+
+import { Block, Title } from "../styles/components";
+import { showUp } from "../styles/keyframes";
 
 type TestProps = {
   router: NextRouter;

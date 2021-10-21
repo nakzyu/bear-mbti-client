@@ -1,6 +1,4 @@
-import { Indicators } from "../types/indicators";
-import { Question } from "../types/question";
-
+import { Indicators, Question } from "../types";
 export const Questions: Question[] = [
   {
     direction: "충동적으로 두 달 후 바디 프로필을 덜컥 결제해버린 당신,",

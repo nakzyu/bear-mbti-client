@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
-import { SinglePageContent } from "../../styles/components";
-import TestComponent from "../../components/test";
 import { useRouter } from "next/router";
+
+import TestComponent from "../../components/test";
+import { SinglePageContent } from "../../styles/components";
 
 const QuestionPage: NextPage = () => {
   const router = useRouter();

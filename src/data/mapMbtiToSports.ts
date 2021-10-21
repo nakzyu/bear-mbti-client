@@ -1,4 +1,4 @@
-const mapMbtiToSports = {
+export const mapMbtiToSports = {
   INTP: "weight-training",
   INTJ: "weight-training",
   ENTJ: "tennis",
@@ -16,5 +16,3 @@ const mapMbtiToSports = {
   ESTP: "surfing",
   ESFP: "surfing",
 };
-
-export default mapMbtiToSports;

@@ -1,8 +1,12 @@
-import { GetStaticPropsContext, NextPage } from "next";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import AutoTicker from "../../../components/autoTicker";
+import { GetStaticPropsContext, NextPage } from "next";
+
 import ShareButtons from "../../../components/shareButtons";
+
+import { HeadTag } from "../../../types";
+import { getResult } from "../../../utils/api";
+import genHead from "../../../utils/customHead";
 import { sportsResults } from "../../../data/sportsResults";
 import {
   Block,
@@ -14,9 +18,6 @@ import {
   ScrollableContent,
   Title,
 } from "../../../styles/components";
-import { HeadTag } from "../../../types/headTag";
-import { getResult } from "../../../utils/api";
-import genHead from "../../../utils/customHead";
 
 type Props = {
   type: string;

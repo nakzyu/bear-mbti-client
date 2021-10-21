@@ -1,11 +1,12 @@
 import type { AppProps } from "next/app";
-import Head from "next/head";
 import styled, { ThemeProvider } from "styled-components";
+
 import GlobalStyles from "../styles/global";
 import { Container } from "../styles/components";
 import theme from "../styles/theme";
+
 import genHead from "../utils/customHead";
-import { HeadTag } from "../types/headTag";
+import { HeadTag } from "../types";
 
 declare global {
   interface Window {

@@ -59,7 +59,6 @@ const Result: NextPage<Props, JSX.Element> = ({
     getResult().then((data) => {
       if (data) {
         const idx = data.findIndex(([sportType, _]) => sportType === type);
-        console.log(data, idx);
         if (idx >= 0) {
           const allFreqs = data.reduce((a, b) => a + b[1], 0);
           if (!allFreqs) return;

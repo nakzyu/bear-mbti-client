@@ -17,7 +17,6 @@ export default function AutoTicker({ text, duration }: Props): JSX.Element {
   useEffect(() => {
     const intv = setInterval(() => {
       setCount((prev) => {
-        console.log(prev);
         if (prev >= strings.length) {
           return 1;
         }

@@ -49,7 +49,7 @@ export const Questions: Question[] = [
     direction: "나는 새로운 운동을 시작할 때",
     options: [
       {
-        text: "여러 사람과 함께할 수 있는 운동 크루를 알아보는 편이다",
+        text: "여러 사람과 함께할 수 있는 운동을 알아보는 편이다",
         selected: false,
         type: Indicators.Extraversion,
       },
@@ -64,14 +64,14 @@ export const Questions: Question[] = [
     direction: "PT 첫날, 트레이너가 따라 하기 힘든 식단과 운동을 제안한다면?",
     options: [
       {
-        text: "전문가가 짠 식단과 운동이니 일단 따라 해본다",
-        selected: false,
-        type: Indicators.Sensing,
-      },
-      {
         text: "무작정 따라 하고 싶지 않아, 더 나은 방법을 제안해 본다",
         selected: false,
         type: Indicators.INtuition,
+      },
+      {
+        text: "전문가가 짠 식단과 운동이니 일단 따라 해본다",
+        selected: false,
+        type: Indicators.Sensing,
       },
     ],
   },
@@ -140,14 +140,14 @@ export const Questions: Question[] = [
     direction: "운동 경기 중에 상대가 반칙을 한 것 같다",
     options: [
       {
-        text: "잘잘못은 확실히 짚고 넘어간다",
-        selected: false,
-        type: Indicators.Thinking,
-      },
-      {
         text: "분위기 생각해서 적당히 참고 넘어간다",
         selected: false,
         type: Indicators.Feeling,
+      },
+      {
+        text: "잘잘못은 확실히 짚고 넘어간다",
+        selected: false,
+        type: Indicators.Thinking,
       },
     ],
   },

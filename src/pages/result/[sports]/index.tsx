@@ -38,7 +38,7 @@ const Result: NextPage<Props, JSX.Element> = ({
   const headTags: HeadTag[] = [
     {
       property: "og:title",
-      content: title + "하는 곰돌이",
+      content: title + " 곰돌이",
     },
     {
       property: "og:image",
@@ -77,7 +77,7 @@ const Result: NextPage<Props, JSX.Element> = ({
       {genHead(headTags)}
       <ScrollableContent>
         <Block flex={0.5} />
-        <Title>{title}하는 곰돌이</Title>
+        <Title>{title} 곰돌이</Title>
         <ImgContaier>
           <ImgCard src={`/images/${type}.png`} alt={`${type}-image`} />
         </ImgContaier>
@@ -94,7 +94,7 @@ const Result: NextPage<Props, JSX.Element> = ({
         hostUrl={host}
         resultUrl={resultUrl}
         typeImgSrc={imgSrcUrlForShare}
-        title={title + "하는 곰돌이"}
+        title={title + " 곰돌이"}
         subtitle={subtitle}
       />
       <Link href="/" passHref>

@@ -25,5 +25,6 @@ const DirectionText = styled.p`
   font-weight: 700;
   text-align: left;
   width: inherit;
-  height: 90px;
+  height: 60px;
+  word-break: keep-all;
 `;

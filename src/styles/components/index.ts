@@ -57,7 +57,10 @@ export const Container = styled.div`
 export const Content = styled.p`
   margin-top: 15px;
   margin-bottom: 15px;
+  display: block;
+  white-space: pre-line;
   text-align: justify;
+
   font-size: 15px;
   line-height: 22px;
   max-width: 316px;
@@ -79,7 +82,7 @@ export const ImgCard = styled.img`
 export const Subtitle = styled.h2`
   font-size: 18px;
   color: ${(props) => props.theme.GRAY_COLOR};
-  margin: auto;
+  margin-top: 10px;
   text-align: center;
 `;
 
@@ -94,9 +97,12 @@ export const Title = styled.h1`
   font-size: 36px;
   max-width: 500px;
   font-weight: 700;
+
   flex: 0.6;
   margin: auto;
   text-align: center;
   display: flex;
+  line-height: 1.4;
   align-items: center;
+  word-break: keep-all;
 `;

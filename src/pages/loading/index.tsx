@@ -24,9 +24,9 @@ const Loading: NextPage = () => {
   return (
     <SinglePageContent>
       <PositioningDiv>
-        <Title>
+        <LoadingText>
           결과 분석 중<AutoTicker text={"..."} duration={500} />
-        </Title>
+        </LoadingText>
         <LoadingImg src="images/loading.png" />
       </PositioningDiv>
     </SinglePageContent>
@@ -34,6 +34,14 @@ const Loading: NextPage = () => {
 };
 
 export default Loading;
+
+const LoadingText = styled.h1`
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-size: 36px;
+  font-weight: 700;
+`;
 
 const PositioningDiv = styled.div`
   width: 100%;
@@ -43,6 +51,7 @@ const PositioningDiv = styled.div`
   align-items: center;
   margin: auto;
   justify-content: center;
+  overflow: hidden;
 `;
 
 const LoadingImg = styled.img`
@@ -54,6 +63,7 @@ const LoadingImg = styled.img`
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
+  overflow: hidden;
 
   @keyframes rotate {
     from {

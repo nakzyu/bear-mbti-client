@@ -30,12 +30,12 @@ export default function showAlert(text: string): void {
   document.body.appendChild(textContainer);
   let opcaity = 1;
   const intv = setInterval(() => {
-    opcaity *= 0.95;
+    opcaity -= 0.05;
     textContainer.style.opacity = `${opcaity}`;
-    if (opcaity < 0.2) {
+    if (opcaity < 0.1) {
       document.body.removeChild(textContainer);
       clearInterval(intv);
     }
-  }, 10);
+  }, 100);
   return;
 }

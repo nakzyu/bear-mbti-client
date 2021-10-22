@@ -89,6 +89,8 @@ const Card = styled.li`
 const OptionText = styled.p`
   font-size: 16px;
   width: inherit;
+  word-break: keep-all;
+  line-height: 1.4;
   color: ${(props: OptionTextProps) =>
     props.selected ? "#f7f7f7" : "rgba(0, 0, 0, 0.8)"};
 `;

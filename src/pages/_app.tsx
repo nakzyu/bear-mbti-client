@@ -56,9 +56,8 @@ export default MyApp;
 
 const Space = styled.div`
   width: 80vw;
-  height: 5vh;
+  height: 3vh;
   @media screen and (min-height: 900px) {
-    height: 5vh;
-    max-height: 400px;
+    max-height: 300px;
   }
 `;

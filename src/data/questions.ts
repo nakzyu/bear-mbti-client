@@ -61,10 +61,10 @@ export const Questions: Question[] = [
     ],
   },
   {
-    direction: "PT 첫날, 트레이너가 따라 하기 힘든 식단과 운동을 제안한다면?",
+    direction: "PT 첫날, 트레이너가 비현실적인 식단과 운동을 제안한다면?",
     options: [
       {
-        text: "무작정 따라 하고 싶지 않아, 더 나은 방법을 제안해 본다",
+        text: "트레이너로서의 자질이 있는지 의심부터 한다",
         selected: false,
         type: Indicators.INtuition,
       },
@@ -109,7 +109,7 @@ export const Questions: Question[] = [
     direction: "나는 운동을 해낸 게 뿌듯할 때",
     options: [
       {
-        text: "뿌듯한 마음을 일기에 쓰거나, 제일 친한 친구에게만 자랑하는 편이다",
+        text: "뿌듯한 마음으로 기분 좋게 잠든다",
         selected: false,
         type: Indicators.Introversion,
       },
@@ -140,7 +140,7 @@ export const Questions: Question[] = [
     direction: "운동 경기 중에 상대가 반칙을 한 것 같다",
     options: [
       {
-        text: "분위기 생각해서 적당히 참고 넘어간다",
+        text: "분위기 생각해서 좋게 좋게 넘어간다",
         selected: false,
         type: Indicators.Feeling,
       },

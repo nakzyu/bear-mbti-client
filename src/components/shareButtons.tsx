@@ -12,7 +12,6 @@ type ShareButtonsProps = {
 };
 
 export default function ShareButtons({
-  hostUrl,
   resultUrl,
   typeImgSrc,
   title,

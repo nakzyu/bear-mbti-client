@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import styled from "styled-components";
 
 import AutoTicker from "../../components/autoTicker";
-import { SinglePageContent, Title } from "../../styles/components";
+import { SinglePageContent } from "../../styles/components";
 
 const Loading: NextPage = () => {
   const history = useRouter();

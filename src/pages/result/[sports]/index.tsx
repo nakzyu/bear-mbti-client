@@ -59,7 +59,7 @@ const Result: NextPage<Props, JSX.Element> = ({
   useEffect(() => {
     getResult().then((data) => {
       if (data) {
-        const idx = data.findIndex(([sportType, _]) => sportType === type);
+        const idx = data.findIndex(([sportType]) => sportType === type);
         if (idx >= 0) {
           const allFreqs = data.reduce((a, b) => a + b[1], 0);
           if (!allFreqs) return;
@@ -116,7 +116,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: GetStaticPropsContext) {
   const sports = Object.entries(sportsResults).find(
-    ([key, val]) => params && key === params.sports
+    ([key]) => params && key === params.sports
   ) as [string, { title: string; content: string; subtitle: string }];
 
   return {

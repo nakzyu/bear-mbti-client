@@ -161,7 +161,7 @@ export const Questions: Question[] = [
         type: Indicators.Judging,
       },
       {
-        text: "눈바디과 느낌만으로도 충분하다",
+        text: "눈바디와 느낌만으로도 충분하다",
         selected: false,
         type: Indicators.Perceiving,
       },

@@ -11,7 +11,7 @@ src
 │   ├── loading
 │   ├── q -- question page
 │   └── result
-│   └── [sports] -- text result page
+│       └── [sports] -- text result page
 ├── styles
 │   ├── components -- styled-components
 │   ├── global -- global component of styled-components

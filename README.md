@@ -1,5 +1,3 @@
-https://github.com/nakzyu/bear-mbti
-
 ## Directory structure
 
 ```text

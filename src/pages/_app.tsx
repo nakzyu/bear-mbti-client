@@ -15,7 +15,7 @@ declare global {
   }
 }
 
-if (typeof window !== "undefined") {
+if (typeof window !== "undefined" && process.env.NEXT_PUBLIC_KAKAO_APP_KEY) {
   window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_APP_KEY);
 }
 

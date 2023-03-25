@@ -10,7 +10,6 @@ import { useForm } from "../hooks/useForm";
 import { useAni } from "../hooks/useAni";
 
 import { Question } from "../types";
-import { postResult } from "../utils/api";
 import { calcMBTI } from "../utils/calcMBTI";
 import { mapMbtiToSports } from "../data/mapMbtiToSports";
 
@@ -41,11 +40,7 @@ export default function Test({ router }: TestProps): JSX.Element {
       const mbtiType = calcMBTI(questions);
 
       const sports = (mapMbtiToSports as Record<string, string>)[mbtiType];
-      postResult({
-        type: sports,
-      });
       router.replace(`/loading?sports=${sports}`);
-      return;
     }
   }, [progressRate, questions, router]);
 

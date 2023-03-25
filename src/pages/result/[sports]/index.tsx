@@ -1,11 +1,9 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { GetStaticPropsContext, NextPage } from "next";
 
 import ShareButtons from "../../../components/shareButtons";
 
 import { HeadTag } from "../../../types";
-import { getResult } from "../../../utils/api";
 import genHead from "../../../utils/customHead";
 import { sportsResults } from "../../../data/sportsResults";
 import {
@@ -54,24 +52,6 @@ const Result: NextPage<Props, JSX.Element> = ({
     },
   ];
 
-  const [rank, setRank] = useState<{ rank: number; percent: string }>();
-
-  useEffect(() => {
-    getResult().then((data) => {
-      if (data) {
-        const idx = data.findIndex(([sportType]) => sportType === type);
-        if (idx >= 0) {
-          const allFreqs = data.reduce((a, b) => a + b[1], 0);
-          if (!allFreqs) return;
-          setRank({
-            rank: idx + 1,
-            percent: ((data[idx][1] / allFreqs) * 100).toFixed(1),
-          });
-        }
-      }
-    });
-  }, [type]);
-
   return (
     <>
       {genHead(headTags)}
@@ -84,12 +64,7 @@ const Result: NextPage<Props, JSX.Element> = ({
       </ScrollableContent>
       <ColoredTitle>{subtitle}</ColoredTitle>
       <Content>{content}</Content>
-      {rank && (
-        <Content>
-          이 유형은 전체 테스트 결과의 {rank?.percent}%에 속하며, {rank?.rank}위
-          입니다.
-        </Content>
-      )}
+
       <ShareButtons
         hostUrl={host}
         resultUrl={resultUrl}
@@ -101,7 +76,6 @@ const Result: NextPage<Props, JSX.Element> = ({
         <Button>테스트 다시하기</Button>
       </Link>
 
-      <Content>team.oeeeng@gmail.com</Content>
       <Block flex={1.5} />
     </>
   );
